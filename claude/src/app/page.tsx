@@ -1,18 +1,18 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { Github, Mail, ExternalLink, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import { Separator } from "@/components/ui/separator"
 
 // ─── Animation variant ────────────────────────────────────────────────────────
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, delay: i * 0.1, ease: "easeOut" },
+    transition: { duration: 0.55, delay: i * 0.1, ease: "easeOut" as const },
   }),
 }
 
